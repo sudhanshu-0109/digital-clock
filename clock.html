@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #17ead9, #6078ea);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.clock-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.clock-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 45px 0 rgba(0, 0, 0, 0.4);
+}
+
+.clock-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#ok {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #6078ea, 0 0 40px #6078ea;
+    }
+}
